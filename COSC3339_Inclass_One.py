@@ -1,6 +1,6 @@
-# YOUR NAME HERE
-# YOUR SECTION HERE
-# DATE OF EDITING HERE
+# KAI CAIRO
+# COSC 3339-01
+# 2026-01-15
 
 """
 ASSIGNMENT: INTRODUCTION TO MERGING
@@ -21,7 +21,7 @@ def calculate_hypotenuse(side_a, side_b):
 def count_words(sentence):
     if len(sentence) == 0:
         return 0
-    words = sentence.split(',')  
+    words = sentence.split(' ')  
     return len(words)
 
 
