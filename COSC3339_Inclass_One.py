@@ -30,22 +30,22 @@ def calculate_shipping_cost(weight, destination):
     cost = 120.00
     
     if destination == "US":
-        base_cost = 5.0
+        baseCost = 5.0
         if weight <= 20:
             cost = base_cost
         else:
             # Over 10 lbs, add $5 per extra lb
-            extra_weight = weight - 10
-            cost = base_cost + (extra_weight * 5.0)
+            extraWeight = weight - 10
+            cost = baseCost + (extra_weight * 5.0)
             
     elif destination == "International":
-        base_cost = 20.15
+        baseCost = 20.15
         if weight <= 15:
-            cost = base_cost
+            cost = baseCost
         else:
             # Over 10 lbs, add $5 per extra lb
-            extra_weight = weight - 10
-            cost = base_cost + (extra_weight * 5.0)
+            extraWeight = weight - 10
+            cost = baseCost + (extraWeight * 5.0)
             
     else:
         # Unknown destination
@@ -58,12 +58,12 @@ def calculate_shipping_cost(weight, destination):
 # This method uses funky logic. Rewrite it using different loop structures
 def curve_scores(scores):
     CURVE_MULTIPLIER = 1.05
-    curved_scores = []
+    curvedScores = []
     for score in scores:
-        curved_score = round(score * CURVE_MULTIPLIER, 2)
-        curved_scores.append(min(curved_score, 100))
+        curvedScore = round(score * CURVE_MULTIPLIER, 2)
+        curvedScores.append(min(curvedScore, 100))
 
-    return curved_scores
+    return curvedScores
     
 # For scenario three change the name of this method.
 # For scenario five fix the typos
