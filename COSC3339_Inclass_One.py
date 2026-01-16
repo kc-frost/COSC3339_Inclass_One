@@ -57,9 +57,14 @@ def calculate_shipping_cost(weight, destination):
 
 # This method uses funky logic. Rewrite it using different loop structures
 def curve_scores(scores):
-    return list(map(lambda x: min(x + 5, 100), scores))
+    CURVE_MULTIPLIER = 1.05
+    curved_scores = []
+    for score in scores:
+        curved_score = round(score * CURVE_MULTIPLIER, 2)
+        curved_scores.append(min(curved_score, 100))
 
-
+    return curved_scores
+    
 # For scenario three change the name of this method.
 # For scenario five fix the typos
 def validate_input(text_value):
