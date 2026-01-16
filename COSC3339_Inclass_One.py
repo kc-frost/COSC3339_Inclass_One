@@ -11,7 +11,6 @@ branches to simulate merge conflicts.
 """
 
 import math
-import random
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
 def calculate_hypotenuse(side_a, side_b):
